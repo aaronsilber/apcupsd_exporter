@@ -1,4 +1,4 @@
-FROM golang:1.11-alpine AS builder
+FROM golang:1-alpine AS builder
 
 WORKDIR /go/src/github.com/mdlayher/apcupsd_exporter
 ENV GOPATH=/go
