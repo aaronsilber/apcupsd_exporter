@@ -11,6 +11,7 @@ COPY . .
 RUN go get -d -v ./...
 RUN go install -v ./...
 
+USER nobody
 CMD /go/bin/apcupsd_exporter -apcupsd.addr ${APCUPSD_ADDR} \
     -apcupsd.network ${APCUPSD_NETWORK} -telemetry.addr ${TELEMETRY_ADDR} \
     -telemetry.path ${TELEMETRY_PATH}
