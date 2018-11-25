@@ -3,7 +3,7 @@ RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 
 WORKDIR /go/src/github.com/mdlayher/apcupsd_exporter
-ENV GOPATH=/go APCUPSD_ADDR=":3551" APCUPSD_NETWORK=tcp \
+ENV GOPATH=/go APCUPSD_ADDR=":3551" APCUPSD_NETWORK="tcp" \
     TELEMETRY_ADDR=":9162" TELEMETRY_PATH="/metrics"
 
 COPY . .
