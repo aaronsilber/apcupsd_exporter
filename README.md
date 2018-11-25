@@ -37,5 +37,5 @@ Docker Container
 A Docker container is available to run `apcupsd_exporter` without building. Override environment variables at runtime as needed for your environment.
 
 ```
-docker run -e APCUPSD_ADDR=":3551" -e APCUPSD_NETWORK="tcp" -e TELEMETRY_ADDR=":9162" -e TELEMETRY_PATH="/metrics" mdlayher/apcupsd_exporter
+docker run -e APCUPSD_ADDR=":3551" -e APCUPSD_NETWORK="tcp" -e TELEMETRY_ADDR=":9162" -e TELEMETRY_PATH="/metrics" aaronsilber/apcupsd-exporter
 ```
