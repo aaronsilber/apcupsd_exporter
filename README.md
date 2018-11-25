@@ -30,3 +30,12 @@ Here is a screenshot of an example grafana dashboard using metrics from
 `apcupsd_exporter`.
 
 ![sample](https://cloud.githubusercontent.com/assets/1926905/18330011/55c49eca-7524-11e6-8152-717bf4bc75c0.png)
+
+Docker Container
+------
+
+A Docker container is available to run `apcupsd_exporter` without building. Override environment variables at runtime as needed for your environment.
+
+```
+docker run -e APCUPSD_ADDR=":3551" -e APCUPSD_NETWORK="tcp" -e TELEMETRY_ADDR=":9162" -e TELEMETRY_PATH="/metrics" mdlayher/apcupsd_exporter
+```
